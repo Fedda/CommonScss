@@ -1,0 +1,521 @@
+// SCSS for the table in boostrap: https://getbootstrap.com/docs/4.5/content/tables/
+// In order for this to work properly you need the _reboot.scss file (https://getbootstrap.com/docs/4.5/scss/_reboot.scss in chrome --sources)
+
+$hover-color: #e0e8f0;
+$striped-color: #e0e8f0;
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  th {
+    padding: 0.75rem;
+    //vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  td {
+    padding: 0.75rem;
+    //vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  thead {
+    th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-top: 2px solid #dee2e6;
+      }
+    }
+  }
+  .thead-dark {
+    th {
+      color: #fff;
+      background-color: #343a40;
+      border-color: #454d55;
+    }
+  }
+  .thead-light {
+    th {
+      color: #495057;
+      background-color: #e9ecef;
+      border-color: #dee2e6;
+    }
+  }
+}
+.table-sm {
+  th {
+    padding: 0.3rem;
+  }
+  td {
+    padding: 0.3rem;
+  }
+}
+.table-bordered {
+  border: 1px solid #dee2e6;
+  th {
+    border: 1px solid #dee2e6;
+  }
+  td {
+    border: 1px solid #dee2e6;
+  }
+  thead {
+    th {
+      border-bottom-width: 2px;
+    }
+    td {
+      border-bottom-width: 2px;
+    }
+  }
+}
+.table-borderless {
+  th {
+    border: 0;
+  }
+  td {
+    border: 0;
+  }
+  thead {
+    th {
+      border: 0;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border: 0;
+      }
+    }
+  }
+}
+.table-striped {
+  tbody {
+    tr {
+      &:nth-of-type(odd) {
+        //background-color: rgba(0, 0, 0, 0.05);
+        background-color: $striped-color;
+      }
+    }
+  }
+}
+.table-hover {
+  tbody {
+    tr {
+      &:hover {
+        //color: #212529;
+        background-color: $hover-color;
+      }
+    }
+  }
+  .table-primary {
+    &:hover {
+      background-color: #9fcdff;
+      > td {
+        background-color: #9fcdff;
+      }
+      > th {
+        background-color: #9fcdff;
+      }
+    }
+  }
+  .table-secondary {
+    &:hover {
+      background-color: #c8cbcf;
+      > td {
+        background-color: #c8cbcf;
+      }
+      > th {
+        background-color: #c8cbcf;
+      }
+    }
+  }
+  .table-success {
+    &:hover {
+      background-color: #b1dfbb;
+      > td {
+        background-color: #b1dfbb;
+      }
+      > th {
+        background-color: #b1dfbb;
+      }
+    }
+  }
+  .table-info {
+    &:hover {
+      background-color: #abdde5;
+      > td {
+        background-color: #abdde5;
+      }
+      > th {
+        background-color: #abdde5;
+      }
+    }
+  }
+  .table-warning {
+    &:hover {
+      background-color: #ffe8a1;
+      > td {
+        background-color: #ffe8a1;
+      }
+      > th {
+        background-color: #ffe8a1;
+      }
+    }
+  }
+  .table-danger {
+    &:hover {
+      background-color: #f1b0b7;
+      > td {
+        background-color: #f1b0b7;
+      }
+      > th {
+        background-color: #f1b0b7;
+      }
+    }
+  }
+  .table-light {
+    &:hover {
+      background-color: #ececf6;
+      > td {
+        background-color: #ececf6;
+      }
+      > th {
+        background-color: #ececf6;
+      }
+    }
+  }
+  .table-dark {
+    &:hover {
+      background-color: #b9bbbe;
+      > td {
+        background-color: #b9bbbe;
+      }
+      > th {
+        background-color: #b9bbbe;
+      }
+    }
+  }
+  .table-active {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.075);
+      > td {
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+      > th {
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+    }
+  }
+}
+.table-primary {
+  background-color: #b8daff;
+  > th {
+    background-color: #b8daff;
+  }
+  > td {
+    background-color: #b8daff;
+  }
+  th {
+    border-color: #7abaff;
+  }
+  td {
+    border-color: #7abaff;
+  }
+  thead {
+    th {
+      border-color: #7abaff;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-color: #7abaff;
+      }
+    }
+  }
+}
+.table-secondary {
+  background-color: #d6d8db;
+  > th {
+    background-color: #d6d8db;
+  }
+  > td {
+    background-color: #d6d8db;
+  }
+  th {
+    border-color: #b3b7bb;
+  }
+  td {
+    border-color: #b3b7bb;
+  }
+  thead {
+    th {
+      border-color: #b3b7bb;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-color: #b3b7bb;
+      }
+    }
+  }
+}
+.table-success {
+  background-color: #c3e6cb;
+  > th {
+    background-color: #c3e6cb;
+  }
+  > td {
+    background-color: #c3e6cb;
+  }
+  th {
+    border-color: #8fd19e;
+  }
+  td {
+    border-color: #8fd19e;
+  }
+  thead {
+    th {
+      border-color: #8fd19e;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-color: #8fd19e;
+      }
+    }
+  }
+}
+.table-info {
+  background-color: #bee5eb;
+  > th {
+    background-color: #bee5eb;
+  }
+  > td {
+    background-color: #bee5eb;
+  }
+  th {
+    border-color: #86cfda;
+  }
+  td {
+    border-color: #86cfda;
+  }
+  thead {
+    th {
+      border-color: #86cfda;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-color: #86cfda;
+      }
+    }
+  }
+}
+.table-warning {
+  background-color: #ffeeba;
+  > th {
+    background-color: #ffeeba;
+  }
+  > td {
+    background-color: #ffeeba;
+  }
+  th {
+    border-color: #ffdf7e;
+  }
+  td {
+    border-color: #ffdf7e;
+  }
+  thead {
+    th {
+      border-color: #ffdf7e;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-color: #ffdf7e;
+      }
+    }
+  }
+}
+.table-danger {
+  background-color: #f5c6cb;
+  > th {
+    background-color: #f5c6cb;
+  }
+  > td {
+    background-color: #f5c6cb;
+  }
+  th {
+    border-color: #ed969e;
+  }
+  td {
+    border-color: #ed969e;
+  }
+  thead {
+    th {
+      border-color: #ed969e;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-color: #ed969e;
+      }
+    }
+  }
+}
+.table-light {
+  background-color: #fdfdfe;
+  > th {
+    background-color: #fdfdfe;
+  }
+  > td {
+    background-color: #fdfdfe;
+  }
+  th {
+    border-color: #fbfcfc;
+  }
+  td {
+    border-color: #fbfcfc;
+  }
+  thead {
+    th {
+      border-color: #fbfcfc;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-color: #fbfcfc;
+      }
+    }
+  }
+}
+.table-dark {
+  background-color: #c6c8ca;
+  color: #fff;
+  background-color: #343a40;
+  > th {
+    background-color: #c6c8ca;
+  }
+  > td {
+    background-color: #c6c8ca;
+  }
+  th {
+    border-color: #95999c;
+    border-color: #454d55;
+  }
+  td {
+    border-color: #95999c;
+    border-color: #454d55;
+  }
+  thead {
+    th {
+      border-color: #95999c;
+      border-color: #454d55;
+    }
+  }
+  tbody {
+    + {
+      tbody {
+        border-color: #95999c;
+      }
+    }
+  }
+}
+.table-active {
+  background-color: rgba(0, 0, 0, 0.075);
+  > th {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  > td {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+}
+.table-dark.table-bordered {
+  border: 0;
+}
+.table-dark.table-striped {
+  tbody {
+    tr {
+      &:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+}
+.table-dark.table-hover {
+  tbody {
+    tr {
+      &:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.075);
+      }
+    }
+  }
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  > .table-bordered {
+    border: 0;
+    border: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    > .table-bordered {
+      border: 0;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    > .table-bordered {
+      border: 0;
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    > .table-bordered {
+      border: 0;
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    > .table-bordered {
+      border: 0;
+    }
+  }
+}
