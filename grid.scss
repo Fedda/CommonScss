@@ -1,0 +1,88 @@
+// Really simple bootstrap grid, based on boostrap 4.5 grid.
+// Bootstrap style of row, cols spacing ( Every row contains 12 columns )
+// Large screen: .col-lg-#{space}
+// Medium screen: col-md-#{space}
+// Small screen: col-sm-#{space}
+// Extremely small screen: col-xs-#{space}
+// Same all screens col-#{space}
+// Utilization
+// <div class="row">
+//   <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12"></div>
+//   <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12"></div>
+//   <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12"></div>
+//   <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12"></div>
+// </div>
+
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 922px;
+$screen-lg: 1170px;
+$screen-full: 1440px;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+$cols: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+%full-width {
+  position: relative;
+  width: 100%;
+}
+@each $col in $cols {
+  .col-#{$col},
+  .col-sm-#{$col},
+  .col-md-#{$col},
+  .col-lg-#{$col},
+  .col-full-#{$col} {
+    @extend %full-width;
+  }
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@each $col in $cols {
+  .col-#{$col} {
+    flex: #{$col} 0 calc(100% / 12 * #{$col});
+    max-width: calc(100% / 12 * #{$col});
+  }
+}
+
+@media (min-width: $screen-xs) {
+  @each $col in $cols {
+    .col-sm-#{$col} {
+      flex: #{$col} 0 calc(100% / 12 * #{$col});
+      max-width: calc(100% / 12 * #{$col});
+    }
+  }
+}
+
+@media (min-width: $screen-sm) {
+  @each $col in $cols {
+    .col-md-#{$col} {
+      flex: #{$col} 0 calc(100% / 12 * #{$col});
+      max-width: calc(100% / 12 * #{$col});
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  @each $col in $cols {
+    .col-lg-#{$col} {
+      flex: #{$col} 0 calc(100% / 12 * #{$col});
+      max-width: calc(100% / 12 * #{$col});
+    }
+  }
+}
+@media (min-width: $screen-lg) {
+  @each $col in $cols {
+    .col-full-#{$col} {
+      flex: #{$col} 0 calc(100% / 12 * #{$col});
+      max-width: calc(100% / 12 * #{$col});
+    }
+  }
+}
